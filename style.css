@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 body {
+    font-family: "Inter", sans-serif !important;
     background-color: #0b1021 !important;
 }
 
 .card {
+    color: rgba(0, 0, 0, 0.546) !important;
     width: 500px;
     top: 20vh;
     border-radius: 30px;
