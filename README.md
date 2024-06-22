@@ -1,2 +1,2 @@
 # Github-App-Search
-Built with GitHub's API, comes with a lot of features!
+Search for specific users using GitHub's API
