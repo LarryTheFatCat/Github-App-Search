@@ -12,24 +12,26 @@ function locateUser() {
         })
         .then((data) => {
             const obj = JSON.parse(JSON.stringify(data));
-            console.log(data);
-            console.log(obj.name);
+            const username = document.getElementById("username");
+            const name = document.getElementById("name");
+            const image = document.getElementById("image");
+            const followers = document.getElementById("followers");
+            const following = document.getElementById("following");
+            const bio = document.getElementById("bio");
+            const repositoriesPublic = document.getElementById("repositories_public");
 
             // main section, drawing out specifics
-            const username = document.getElementById("username");
+            // After parsing on our json, we can set indivudal items due to
+            // our api response being an object thus allowing us to call
+            // multiple items, just think of it has referencing a dictionary
+            // in python lol
             username.innerHTML = obj.login;
-            const name = document.getElementById("name");
             name.innerHTML = obj.name;
-            const image = document.getElementById("image");
             image.src = obj.avatar_url;
             image.classList.remove("d-none");
-            const followers = document.getElementById("followers");
             followers.innerHTML = obj.followers
-            const following = document.getElementById("following");
             following.innerHTML = obj.following;
-            const bio = document.getElementById("bio");
             bio.innerHTML = obj.bio
-            const repositoriesPublic = document.getElementById("repositories_public");
             repositoriesPublic.innerHTML = obj.public_repos;
         });
 }
